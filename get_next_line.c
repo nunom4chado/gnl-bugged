@@ -21,6 +21,10 @@ char *ft_strchr(char *str, char c)
     return (NULL);
 }
 
+/**
+ * if stopnl (stop new line) is truthy
+ * will only join until new line
+*/
 char    *ft_strjoin(char *s1, char *s2, int stopnl)
 {
     if (!s1)
@@ -66,6 +70,7 @@ char *has_line(char **next)
         newline = ft_strchr(*next, '\n');
         if (newline)
         {
+            // pay atention to newline + 1, cuz we want the char after the newline
             tmp = ft_strjoin(NULL, newline + 1, 0);
             free(*next);
             *next = tmp;
