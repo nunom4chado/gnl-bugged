@@ -120,7 +120,7 @@ char *get_next_line(int fd)
     }
     return(line);
 }
-/*
+
 #include <fcntl.h>
 #include <stdio.h>
 int main(void)
@@ -128,7 +128,7 @@ int main(void)
     char *line;
     int fd;
 
-    fd = open("files/alternate_line_nl_no_nl", O_RDONLY);
+    fd = open("files/multiple_line_no_nl", O_RDONLY);
     while (1)
     {
         line = get_next_line(fd);
@@ -141,4 +141,3 @@ int main(void)
     close(fd);
     return (0);
 }
-*/
